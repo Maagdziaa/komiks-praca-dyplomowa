@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ustawia układ flexbox, który pozwala na łatwe centrowanie i układanie elementów */
+    flex-direction: column; /* Oznacza, że elementy będą układane pionowo */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Minimalna wysokość widoku */
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.comic-container {
+    text-align: center;
+    margin-bottom: 20px; /* Dodaje margines na dole kontenera */
+    max-width: 100%; /* Kontener nie przekracza szerokości ekranu */
+}
+
+.single-frame img {
+    max-width: 600px; /* Ogranicza szerokość pojedynczej klatki do 600px */
+    width: 100%; /* Dostosowuje szerokość obrazka do szerokości kontenera */
+    height: auto; /* Zachowuje proporcje obrazka */
+    border: 2px solid #000000; /* Dodaje ramkę o grubości 2 pikseli i kolorze czarnym */
+    border-radius: 8px; /* Zaokrągla rogi ramki */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodaje cień do obrazka */
+}
+
+.double-frame {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Odstęp między klatkami */
+    max-width: 1200px; /* Ogranicza szerokość kontenera dla dwóch klatek */
+    width: 100%; /* Dostosowanie się do ekranu */
+}
+
+.double-frame img {
+    max-width: 50%; /* Każda klatka zajmuje połowę szerokości kontenera */
+    width: 100%; 
+    height: auto; 
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.task-section {
+    margin-top: 20px;
+    padding: 20px;
+    width: 90%; 
+    max-width: 400px; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.task {
+    margin-bottom: 20px;
+}
+
+.task h2 {
+    margin-top: 0;
+}
+
+.task .question {
+    margin-bottom: 15px;
+}
+
+.task input {
+    padding: 10px;
+    font-size: 1rem; 
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task button {
+    padding: 10px 20px;
+    font-size: 1rem; 
+    background-color: #8FBC8F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.task button:hover {
+    background-color: #90EE90;
+}
+
+.task .result-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.hint-message {
+    margin-top: 10px;
+    font-family: math;
+    color: #555;
+    display: none;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.nav-button {
+	min-width: 150px; 
+    min-height: 50px; 
+    padding: 10px 20px;
+    font-size: 1.125rem; 
+    font-weight: bold;
+    color: white;
+    background-color: #8FBC8F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Dodaje płynne przejście zmiany koloru tła */
+    margin: 0 10px;
+}
+
+.nav-button:hover {
+    background-color: #90EE90;
+}
+
+.nav-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed; /* Brak kursora w momencie, gdy kliknięcie przycisku nie jest możliwe */
+}
+
+.matrix-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.matrix-input {
+    width: 50px; 
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.matrix-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.subtasks-container {
+    margin-bottom: 20px;
+}
+
+.subtask {
+    margin-bottom: 20px;
+}
+
+.subtask p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtask input[type="text"] {
+    padding: 10px;
+    font-size: 1rem; 
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
